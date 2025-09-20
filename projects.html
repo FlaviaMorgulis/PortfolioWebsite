@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url("Screenshot 2025-09-11 204122.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #c5c7d0;
+      }
+
+      nav a {
+        color: #c5c7d0;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: normal;
+      }
+      nav a:hover {
+        color: rgb(245, 140, 48);
+      }
+
+      .content-wrapper {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .projects {
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .projects h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #c5c7d0;
+        margin-bottom: 30px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .project-card {
+        background-color: rgba(0, 0, 0, 0.3); /* lighter card */
+        padding: 20px;
+        border-radius: 8px;
+        color: #fafbfd;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        background-color: rgba(0, 0, 0, 0.4); /* subtle hover highlight */
+      }
+
+      .project-card h3 {
+        margin-top: 0;
+        color: orange;
+      }
+
+      .project-card p {
+        font-size: 14px;
+        margin: 10px 0 20px;
+      }
+
+      .project-card a {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: rgba(244, 118, 1, 0.9);
+        color: #c5c7d0;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+
+      .project-card a:hover {
+        background-color: rgba(239, 93, 45, 0.9);
+      }
+
+      footer {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      footer a {
+        color: #c5c7d0;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+      footer a:hover {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Projects</h1>
+      <nav>
+        <a href="Mywebsite.html">Home</a>
+        <a href="About.html">About</a>
+      </nav>
+    </header>
+
+    <div class="content-wrapper">
+      <div class="projects">
+        <h2>Portfolio</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>BLA bla bla bla bla bla bla bla bla</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Data Dashboard</h3>
+            <p>BLA bla bla bla bla bla bla bla bla</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Machine Learning Model</h3>
+            <p>BLA bla bla bla bla bla bla bla bla</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Web App</h3>
+            <p>BLA bla bla bla bla bla bla bla bla</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a
+        href="https://www.linkedin.com/in/flavia-morgulis-418579221/"
+        target="_blank"
+        >LinkedIn</a
+      >
+      <a href="https://github.com/FlaviaMorgulis" target="_blank">GitHub</a>
+    </footer>
+  </body>
+</html>
