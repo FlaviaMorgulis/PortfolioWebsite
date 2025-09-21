@@ -4,103 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flavia's Homepage</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        font-family: serif;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background-image: url("ImageMainpage.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      header {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        background-color: rgba(148, 43, 43, 0.5);
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 28px;
-      }
-
-      nav a {
-        color: #c5c7d0;
-        text-decoration: none;
-        margin-left: 20px;
-        font-weight: normal;
-      }
-      nav a:hover {
-        color: rgb(245, 140, 48);
-      }
-
-      .content-wrapper {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-
-      h1 {
-        font-size: 50px;
-        color: #f5f5f5;
-        margin: 10px 0;
-      }
-      h2 {
-        font-size: 28px;
-        color: #c5c7d0;
-        margin: 10px 0 30px;
-      }
-
-      button {
-        width: 200px;
-        height: 50px;
-        font-size: 20px;
-        background-color: rgba(11, 146, 101, 0.9);
-        color: #c5c7d0;
-        border: none;
-        border-radius: 10px;
-        cursor: alias;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: rgb(245, 140, 48);
-      }
-
-      footer {
-        position: relative;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: center;
-        padding: 10px 0;
-      }
-
-      footer a {
-        color: #c5c7d0;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: normal;
-      }
-      footer a:hover {
-        color: rgb(245, 140, 48);
-      }
-    </style>
+    <link rel="stylesheet" href="styleindex.css" />
   </head>
   <body>
     <header>
@@ -111,15 +15,7 @@
       </nav>
     </header>
 
-    <div class="content-wrapper">
-      <div class="content">
-        <h1>Hello, I am Flavia</h1>
-        <h2>I am a Web Developer</h2>
-        <button onclick="window.location.href='projects.html'">
-          Check My Work
-        </button>
-      </div>
-    </div>
+    <div id="app" class="content-wrapper"></div>
 
     <footer>
       <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"
@@ -127,5 +23,7 @@
       >
       <a href="https://github.com/FlaviaMorgulis" target="_blank">GitHub</a>
     </footer>
+
+    <script src="indexscript.js"></script>
   </body>
 </html>
