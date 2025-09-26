@@ -3,17 +3,13 @@ body {
   height: 100%;
   margin: 0;
   font-family: serif;
-  color: #39393a;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-image: url("ImageMainpage.png");
+  background-image: url("Image2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #fafbfd;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -24,67 +20,62 @@ header {
   background-color: rgba(148, 43, 43, 0.17);
 }
 
-nav a {
-  color: #39393a;
+header nav a {
+  color: #313133;
   text-decoration: none;
   margin-left: 20px;
 }
-nav a:hover {
-  color: rgb(245, 140, 48);
+header nav a:hover {
+  color: orange;
 }
 
+/* Content wrapper fills space between header and footer */
 .content-wrapper {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* pushes left & right columns to edges */
   align-items: center;
-  padding-left: 50px;
+  padding: 0 40px; /* margin from edges */
 }
 
-.content {
+/* Columns of buttons */
+.left-column,
+.right-column {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-h1 {
-  font-size: 50px;
-  margin: 10px 0;
-}
-
-h2 {
-  font-size: 28px;
-  margin: 10px 0 30px;
-}
-
-/* BUTTONS */
-.button-container {
-  display: flex;
-  flex-direction: row;
   gap: 15px;
-  margin-bottom: 30px;
 }
 
-button {
-  width: 140px;
-  height: 40px;
-  font-size: 16px;
-  background-color: rgba(239, 93, 45, 0.9);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
+/* Project buttons style */
+.project-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-button:hover {
-  background-color: rgb(245, 140, 48);
+  background-color: rgba(244, 118, 1, 0.9);
+  border-radius: 50px;
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  transition: background-color 0.3s;
+  text-align: left;
 }
 
-/* CONTACT SECTION */
-.contact {
-  margin-top: 20px;
+.project-button:hover {
+  background-color: rgba(239, 93, 45, 0.9);
 }
-.contact h3 {
+
+.project-button i {
+  font-size: 16px;
+}
+
+/* Contact section under left column */
+.contact-section {
+  margin-top: 30px;
+}
+
+.contact-section h3 {
   margin-bottom: 10px;
   color: #39393a;
 }
@@ -107,7 +98,6 @@ button:hover {
   fill: rgb(245, 140, 48);
 }
 
-/* FOOTER */
 footer {
   background-color: rgba(0, 0, 0, 0.174);
   text-align: center;
