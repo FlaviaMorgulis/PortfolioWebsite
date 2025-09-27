@@ -1,3 +1,4 @@
+/* Body + general layout */
 html,
 body {
   height: 100%;
@@ -10,12 +11,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("Image1.png");
+  background-image: url("image4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: flex-end;
@@ -33,20 +35,22 @@ nav a:hover {
   color: rgb(245, 140, 48);
 }
 
+/* Main content wrapper */
 .content-wrapper {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 50px;
+  padding: 50px 60px;
   gap: 40px;
 }
 
-/* LEFT COLUMN: ABOUT + BUTTONS + CONTACT */
+/* LEFT COLUMN (About + Buttons + Contact) */
 .left-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 500px;
 }
 
 .left-column h2 {
@@ -81,96 +85,72 @@ button:hover {
   background-color: rgb(245, 140, 48);
 }
 
-/* CONTACT SECTION (same style as index) */
+/* CONTACT SECTION (like projects icons) */
 .contact {
   margin-top: 20px;
 }
+
 .contact h3 {
   margin-bottom: 10px;
   color: #39393a;
 }
+
 .contact-links {
   display: flex;
-  gap: 20px;
+  gap: 20px; /* spacing between icons */
   align-items: center;
 }
+
 .contact-links a svg {
   width: 32px;
   height: 32px;
-  fill: #39393a;
+  fill: #39393a; /* icon color */
   transition: transform 0.2s ease, fill 0.3s ease;
 }
+
 .contact-links a:hover svg {
   transform: scale(1.2);
   fill: rgb(245, 140, 48);
 }
 
-/* RIGHT COLUMN: LANGUAGES */
+/* RIGHT COLUMN (Languages like projects buttons) */
 .right-column {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.lang-button {
+  display: flex;
   align-items: center;
-  margin-left: 80px; /* adjust this value to move section more right */
-}
-.lang-label {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.icons-circle {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  animation: rotate-circle 15s linear infinite;
-}
-.circle-icon {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -30px;
-  transition: transform 0.3s ease;
-}
-.circle-icon:hover {
-  transform: scale(1.3);
+  gap: 10px;
+  width: 220px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(244, 118, 1, 0.9);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Arrange icons in circle */
-.circle-icon:nth-child(1) {
-  transform: translate(100px, 0);
-}
-.circle-icon:nth-child(2) {
-  transform: translate(50px, 86px);
-}
-.circle-icon:nth-child(3) {
-  transform: translate(-50px, 86px);
-}
-.circle-icon:nth-child(4) {
-  transform: translate(-100px, 0);
-}
-.circle-icon:nth-child(5) {
-  transform: translate(-50px, -86px);
-}
-.circle-icon:nth-child(6) {
-  transform: translate(50px, -86px);
+.lang-button img {
+  width: 20px;
+  height: 20px;
 }
 
-@keyframes rotate-circle {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lang-button:hover {
+  background-color: rgba(239, 93, 45, 0.9);
 }
 
 /* FOOTER */
 footer {
   background-color: rgba(0, 0, 0, 0.174);
-  text-align: center;
   padding: 5px;
   font-size: 12px;
   color: #1a1a1a;
+  text-align: center;
   margin-top: auto;
 }

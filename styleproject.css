@@ -1,107 +1,87 @@
-html,
+/* Background image for projects page */
 body {
-  height: 100%;
-  margin: 0;
-  font-family: serif;
   background-image: url("Image2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fafbfd;
+  color: #39393a;
   display: flex;
   flex-direction: column;
-}
-
-header {
+  min-height: 100vh;
+  margin: 0;
+  font-family: serif;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: rgba(148, 43, 43, 0.17);
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-header nav a {
-  color: #313133;
-  text-decoration: none;
-  margin-left: 20px;
-}
-header nav a:hover {
-  color: orange;
-}
-
-/* Content wrapper fills space between header and footer */
 .content-wrapper {
   flex: 1;
+}
+/* Columns layout */
+.content-columns {
+  flex: 1;
   display: flex;
-  justify-content: space-between; /* pushes left & right columns to edges */
-  align-items: center;
-  padding: 0 40px; /* margin from edges */
+  justify-content: space-between;
+  align-items: flex-start; /* align top edges */
+  padding: 50px 60px; /* same spacing as index */
+  gap: 40px;
 }
 
-/* Columns of buttons */
-.left-column,
+/* Right column for projects */
 .right-column {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: flex-start;
 }
 
-/* Project buttons style */
 .project-button {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   cursor: pointer;
   background-color: rgba(244, 118, 1, 0.9);
-  border-radius: 50px;
-  padding: 8px 15px;
+  border-radius: 8px;
+  padding: 8px 12px;
   color: #fff;
   font-size: 14px;
-  border: none;
+  width: 220px;
+  justify-content: flex-start;
   transition: background-color 0.3s;
-  text-align: left;
-}
-
-.project-button:hover {
-  background-color: rgba(239, 93, 45, 0.9);
 }
 
 .project-button i {
   font-size: 16px;
 }
 
-/* Contact section under left column */
-.contact-section {
-  margin-top: 30px;
+.project-button:hover {
+  background-color: rgba(239, 93, 45, 0.9);
 }
 
-.contact-section h3 {
-  margin-bottom: 10px;
-  color: #39393a;
+/* Description box (slightly transparent) */
+.description-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(51, 50, 50, 0.6); /* softer transparency */
+  color: #fff;
+  padding: 18px 22px;
+  border-radius: 8px;
+  max-width: 380px;
+  display: none;
+  z-index: 1000;
+  line-height: 1.5;
 }
-
-.contact-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.contact-links a svg {
-  width: 32px;
-  height: 32px;
-  fill: #39393a;
-  transition: transform 0.2s ease, fill 0.3s ease;
-}
-
-.contact-links a:hover svg {
-  transform: scale(1.2);
-  fill: rgb(245, 140, 48);
-}
-
 footer {
-  background-color: rgba(0, 0, 0, 0.174);
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
   text-align: center;
   padding: 2px;
   font-size: 12px;
   color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.174);
 }

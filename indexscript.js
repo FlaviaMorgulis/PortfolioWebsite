@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   app.innerHTML = `
     <div class="content">
-      <h1>Hello, I am Flavia</h1>
-      <h2>I am a Web Developer</h2>
+      <h1> Flavia Morgulis</h1>
+      <h2>Software Development</h2>
 
       <div class="button-container">
         <button id="projectsBtn">Projects</button>

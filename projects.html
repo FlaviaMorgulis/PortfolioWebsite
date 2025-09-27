@@ -3,8 +3,194 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Projects</title>
-    <link rel="stylesheet" href="styleproject.css" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styleindex.css" />
+    <style>
+      /* Body: inherit index style but with projects background */
+      body {
+        font-family: serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url("Image2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #39393a;
+      }
+
+      /* Header & footer same as index */
+      header,
+      footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      header {
+        padding: 15px 30px;
+        background-color: rgba(148, 43, 43, 0.17);
+      }
+
+      header nav a {
+        color: #39393a;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      header nav a:hover {
+        color: rgb(245, 140, 48);
+      }
+
+      footer {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center;
+        text-align: center;
+        padding: 2px;
+        font-size: 12px;
+        color: #1a1a1a;
+        background-color: rgba(0, 0, 0, 0.174);
+      }
+
+      /* Main content wrapper */
+      .content-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 50px 60px; /* same vertical spacing as index */
+        gap: 40px;
+      }
+
+      /* LEFT COLUMN (exactly like index) */
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 300px;
+        margin-top: 50px; /* adjust to match index perfectly */
+      }
+
+      .left-column h1 {
+        font-size: 50px;
+        margin: 10px 0;
+        white-space: nowrap;
+      }
+
+      .left-column h2 {
+        font-size: 28px;
+        margin: 10px 0 30px;
+      }
+
+      /* Home/About buttons (same as index) */
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .button-container button {
+        width: 140px;
+        height: 40px;
+        font-size: 16px;
+        background-color: rgba(239, 93, 45, 0.9);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .button-container button:hover {
+        background-color: rgb(245, 140, 48);
+      }
+
+      /* Contact section (same as index) */
+      .contact {
+        margin-top: 20px;
+      }
+
+      .contact h3 {
+        margin-bottom: 10px;
+        color: #39393a;
+      }
+
+      .contact-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .contact-links a svg {
+        width: 32px;
+        height: 32px;
+        fill: #39393a;
+        transition: transform 0.2s ease, fill 0.3s ease;
+      }
+
+      .contact-links a:hover svg {
+        transform: scale(1.2);
+        fill: rgb(245, 140, 48);
+      }
+
+      /* RIGHT COLUMN with project buttons */
+      .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        margin-top: 50px; /* align with left column */
+      }
+
+      .right-column h2 {
+        color: #39393a;
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      .project-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        background-color: rgba(244, 118, 1, 0.9);
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: #fff;
+        font-size: 14px;
+        border: none;
+        transition: background-color 0.3s;
+        width: 220px;
+        justify-content: flex-start;
+      }
+
+      .project-button i {
+        font-size: 16px;
+      }
+
+      .project-button:hover {
+        background-color: rgba(239, 93, 45, 0.9);
+      }
+
+      /* Description box slightly more transparent */
+      .description-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(51, 50, 50, 0.6); /* softer */
+        color: #fff;
+        padding: 18px 22px;
+        border-radius: 8px;
+        max-width: 380px;
+        display: none;
+        z-index: 1000;
+        line-height: 1.5;
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,20 +205,19 @@
     </header>
 
     <div class="content-wrapper">
-      <!-- Left column buttons + contact -->
+      <!-- LEFT COLUMN -->
       <div class="left-column">
-        <button class="project-button">
-          <i class="fab fa-html5"></i> Portfolio Website
-        </button>
-        <button class="project-button">
-          <i class="fab fa-python"></i> Data Dashboard
-        </button>
-        <button class="project-button">
-          <i class="fab fa-python"></i> ML Model
-        </button>
+        <h2>
+          'Music and coding are siblings. Both turn patterns into meaning,
+          rhythm into structure, and silence into possibility.'
+        </h2>
 
-        <!-- Contact section -->
-        <div class="contact-section">
+        <div class="button-container">
+          <button id="homeBtn">Home</button>
+          <button id="aboutBtn">About</button>
+        </div>
+
+        <div class="contact">
           <h3>Contact:</h3>
           <div class="contact-links">
             <a
@@ -61,20 +246,87 @@
         </div>
       </div>
 
-      <!-- Right column buttons -->
-      <div class="right-column">
-        <button class="project-button">
-          <i class="fab fa-node"></i> Web App
-        </button>
-        <button class="project-button">
-          <i class="fab fa-node"></i> API Project
-        </button>
-        <button class="project-button">
-          <i class="fab fa-python"></i> Data Analysis
-        </button>
+      <!-- RIGHT COLUMN: 6 project buttons -->
+      <div class="right-column" id="projects-col">
+        <h2>Projects</h2>
       </div>
     </div>
 
+    <!-- Description box -->
+    <div class="description-box" id="descBox"></div>
+
+    <script>
+      // Navigation buttons
+      document
+        .getElementById("homeBtn")
+        .addEventListener("click", () => (window.location.href = "index.html"));
+      document
+        .getElementById("aboutBtn")
+        .addEventListener("click", () => (window.location.href = "About.html"));
+
+      const projects = [
+        {
+          title: "Portfolio Website",
+          desc: "Responsive website with HTML, CSS, JS.",
+          icons: ["fab fa-html5"],
+        },
+        {
+          title: "Data Dashboard",
+          desc: "Interactive dashboard with Python and Plotly.",
+          icons: ["fab fa-python"],
+        },
+        {
+          title: "ML Model",
+          desc: "Predictive ML model using scikit-learn.",
+          icons: ["fab fa-python"],
+        },
+        {
+          title: "Web App",
+          desc: "Full-stack web app using Node.js and Express.",
+          icons: ["fab fa-node"],
+        },
+        {
+          title: "API Project",
+          desc: "REST API with Node.js and MongoDB.",
+          icons: ["fab fa-node"],
+        },
+        {
+          title: "Data Analysis",
+          desc: "Data analysis with Python, Pandas, Matplotlib.",
+          icons: ["fab fa-python"],
+        },
+      ];
+
+      const projectsCol = document.getElementById("projects-col");
+      const descBox = document.getElementById("descBox");
+
+      projects.forEach((p) => {
+        const btn = document.createElement("button");
+        btn.className = "project-button";
+
+        p.icons.forEach((ic) => {
+          const i = document.createElement("i");
+          i.className = ic;
+          btn.appendChild(i);
+        });
+
+        const span = document.createElement("span");
+        span.textContent = p.title;
+        btn.appendChild(span);
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          descBox.innerHTML = `<strong>${p.title}</strong><p>${p.desc}</p>`;
+          descBox.style.display = "block";
+        });
+
+        projectsCol.appendChild(btn);
+      });
+
+      document.addEventListener("click", () => {
+        descBox.style.display = "none";
+      });
+    </script>
     <footer>
       <p>© 2025 Flavia Morgulis</p>
     </footer>
