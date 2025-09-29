@@ -15,6 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Header */
@@ -41,7 +42,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 50px 60px;
+  padding: 50px 30px;
   gap: 40px;
 }
 
@@ -153,4 +154,41 @@ footer {
   color: #1a1a1a;
   text-align: center;
   margin-top: auto;
+}
+
+/* Responsive styles for phone/tablet */
+@media (max-width: 700px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .left-column,
+  .right-column {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    align-items: center;
+    text-align: center;
+  }
+  .button-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-bottom: 30px;
+  }
+  .button-container button {
+    width: 100% !important;
+    max-width: 220px !important;
+    margin: 0 auto !important;
+  }
+  .lang-button {
+    width: 100% !important;
+    max-width: 220px !important;
+    margin: 10px auto !important;
+    justify-content: center !important;
+  }
 }
