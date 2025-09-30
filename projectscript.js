@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "About.html";
   });
 
-  // Each project lists the languages used as icons
   const projects = [
     {
       title: "Portfolio Website",

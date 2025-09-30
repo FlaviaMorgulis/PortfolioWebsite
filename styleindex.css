@@ -37,9 +37,9 @@ nav a:hover {
   flex: 1;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start; /* was center */
+  align-items: flex-start;
   padding-left: 50px;
-  padding-top: 120px; /* add this line or reduce if already present */
+  padding-top: 120px;
 }
 
 .content {
@@ -162,7 +162,7 @@ button:hover {
   fill: rgb(245, 140, 48);
 }
 
-/* INFO ROW (if used elsewhere) */
+/* INFO ROW */
 .info-row {
   display: flex;
   gap: 40px;
