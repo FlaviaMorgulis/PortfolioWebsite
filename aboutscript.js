@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="right-column">
         <h2>Languages</h2>
-        <button class="lang-button"><img src="python.png" alt="Python">Python</button>
-        <button class="lang-button"><img src="css-3.png" alt="CSS">CSS</button>
-        <button class="lang-button"><img src="js.png" alt="JS">JS</button>
-        <button class="lang-button"><img src="html.png" alt="HTML">HTML</button>
-        <button class="lang-button"><img src="sql.png" alt="SQL">SQL</button>
-        <button class="lang-button"><img src="github.png" alt="GitHub">GitHub</button>
+        <button class="lang-button"><img src="images/python.png" alt="Python">Python</button>
+        <button class="lang-button"><img src="images/css-3.png" alt="CSS">CSS</button>
+        <button class="lang-button"><img src="images/js.png" alt="JS">JS</button>
+        <button class="lang-button"><img src="images/html.png" alt="HTML">HTML</button>
+        <button class="lang-button"><img src="images/sql.png" alt="SQL">SQL</button>
+        <button class="lang-button"><img src="images/github.png" alt="GitHub">GitHub</button>
       </div>
     </div>
   `;
